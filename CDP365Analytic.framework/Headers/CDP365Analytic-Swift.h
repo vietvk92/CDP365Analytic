@@ -461,7 +461,7 @@ SWIFT_CLASS("_TtC14CDP365Analytic22ITWindowViewController")
 
 
 
-typedef SWIFT_ENUM(NSInteger, LogLevel, open) {
+typedef SWIFT_ENUM(NSInteger, LogLevel, closed) {
   LogLevelVerbose = 10,
   LogLevelDebug = 20,
   LogLevelInfo = 30,
