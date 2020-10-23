@@ -8,6 +8,8 @@ Pod::Spec.new do |spec|
   spec.author        = { "VietVK" => "vietvk@antsprogrammatic.com" }
   spec.platform      = :ios, "12.0"
   spec.source = { :http => "https://github.com/vietvk92/CDP365Analytic/archive/#{spec.version}.zip" }
+  spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   spec.vendored_frameworks = "CDP365Analytic-#{spec.version}/CDP365Analytic.framework"
   spec.swift_version = "5.0"
   spec.license      = { :type => 'Apache License, Version 2.0', :text => <<-LICENSE
