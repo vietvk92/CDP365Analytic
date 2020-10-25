@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name          = "CDP365Analytic"
-  spec.version       = "1.0.3"
+  spec.version       = "1.0.4"
   spec.summary       = "CDP365Analytic framework."
   spec.description   = "This is a CDP365Analytic framework that was made by ANTSOMI"
   spec.homepage      = "https://antsprogrammatic.com"
