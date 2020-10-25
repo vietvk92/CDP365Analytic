@@ -6,19 +6,19 @@
 	<dict>
 		<key>CardView.nib/objects-13.0+.nib</key>
 		<data>
-		0LIPnE94b9N8fHq1hl/XfBGh1/M=
+		w135+NwQyT+C2m9TYz/Yy7HOWkI=
 		</data>
 		<key>CardView.nib/runtime.nib</key>
 		<data>
-		TemwZ1GxbcRopdYZJ6C/5qWG+Og=
+		MKnDADc4aZIttnFiVHpBv01b18Y=
 		</data>
 		<key>CenteredView.nib/objects-13.0+.nib</key>
 		<data>
-		/aAwYVxt9FvnJA0QYrdc3B4cctc=
+		CmYET8SqnFa45cvlKbeHKu+bXoE=
 		</data>
 		<key>CenteredView.nib/runtime.nib</key>
 		<data>
-		zkp9HXpNuIk6mz47Gw7ZIi/J+vg=
+		wtSUPFIX6I+aeoobq9edHRnlJ2c=
 		</data>
 		<key>Headers/CDP365Analytic-Swift.h</key>
 		<data>
@@ -34,11 +34,19 @@
 		</data>
 		<key>MessageView.nib/objects-13.0+.nib</key>
 		<data>
-		nTei8ndpIS+foQPto1UyPLvtbDU=
+		HAktafVi4tb0/NYOiFtfJw0xrGA=
 		</data>
 		<key>MessageView.nib/runtime.nib</key>
 		<data>
-		Gw48h/AOakOZ3TIWu6o+9eJaOyI=
+		7C3M7tXAwk78yTlh/21Tmyqtp7A=
+		</data>
+		<key>Modules/CDP365Analytic.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
+		<data>
+		UCYKGZmydgjW4alPQvB8VArzsJc=
+		</data>
+		<key>Modules/CDP365Analytic.swiftmodule/Project/arm64.swiftsourceinfo</key>
+		<data>
+		UCYKGZmydgjW4alPQvB8VArzsJc=
 		</data>
 		<key>Modules/CDP365Analytic.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -70,19 +78,19 @@
 		</data>
 		<key>StatusLine.nib/objects-13.0+.nib</key>
 		<data>
-		ka0jULMW5yZbNvjQWla4cJKciKo=
+		1jNJzlVMBpl536vCsCtH7z8zazc=
 		</data>
 		<key>StatusLine.nib/runtime.nib</key>
 		<data>
-		lowfZJGIJ9OSKziruB+tjyb1i/E=
+		PEdpw+wBVpeiHjKavKB57pVUM78=
 		</data>
 		<key>TabView.nib/objects-13.0+.nib</key>
 		<data>
-		WeqCQJQ+BZToS73FCwqqA/LlUZQ=
+		ikAiFkSuLKnKGZdN3SqY1DS9wMY=
 		</data>
 		<key>TabView.nib/runtime.nib</key>
 		<data>
-		fVvZPeHBSpr3lfoiUb+ck3R7Ij4=
+		zKTO43kZAPvHubrKq1k3on6vc/M=
 		</data>
 		<key>icon_close.png</key>
 		<data>
@@ -95,28 +103,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HEQTGhtMMMJL31KjJMsxpUb/XfVPMjXr6cf4D1G9OdQ=
+			DLPLdEBrzHA6BErohQrlHLfyTb167yZYEx/Oo56XknY=
 			</data>
 		</dict>
 		<key>CardView.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FaQ5BpP0xysaxiugTgutJkzC3U9l3WF9tyVrazxqnxE=
+			+5ZVzv41Fxz9hgN1G12CipVY60R0bVBXVb+C70wyF+E=
 			</data>
 		</dict>
 		<key>CenteredView.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			F6NH+wSn0n8GP/PZgMFyWiMG4FulUECnyM3uXZ3OOJU=
+			71MVtKHzBq4vCgsARl32rlFKXgw/5kBZKqC1/kmYUas=
 			</data>
 		</dict>
 		<key>CenteredView.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MNtImDMsrA+FfI9JzqPrgCJlwRS9zM26phUmN1+H6Oc=
+			eCkRC5bUeLr0HzKro9F/7eycgeaWL5zGoPO9c1BfEOI=
 			</data>
 		</dict>
 		<key>Headers/CDP365Analytic-Swift.h</key>
@@ -137,14 +145,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XOjpcBkAl7LAZ1Kj4dPRJre/jo5HI+dtg1xW08c/jnY=
+			mA4YuEAXQSNDgeiWOPunHIA6qROp8lNQJrja0z0G06U=
 			</data>
 		</dict>
 		<key>MessageView.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			azXGs2HrPZURVfLGIQFAwkIo6vOAZqbkHp4g3+qWx5w=
+			LYPDJZGpZrD3cNMEt+3JOcIFB4uu8JAdshD1Uhd+sxQ=
+			</data>
+		</dict>
+		<key>Modules/CDP365Analytic.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			tcUkjqzHJGr6pqbY4vXcZxMoHohB1iz9hLSlGM0/qXM=
+			</data>
+		</dict>
+		<key>Modules/CDP365Analytic.swiftmodule/Project/arm64.swiftsourceinfo</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			tcUkjqzHJGr6pqbY4vXcZxMoHohB1iz9hLSlGM0/qXM=
 			</data>
 		</dict>
 		<key>Modules/CDP365Analytic.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -200,28 +222,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HpVSuLY2Hk2iQe7JwJlvn5TMPr6zLQlrMbbo+w2NjS8=
+			78l30q3xuEn/ZW8MMMrJDADs+TaMuNUfghoEuvmfXQY=
 			</data>
 		</dict>
 		<key>StatusLine.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HnZ040CyKu4pE9+OxbUAUtcIoFUHYdPvZspG1aTGoD8=
+			DqUMPJ5atrObsmxYZonaiKL1v5PaYT4mb5lxc5I3AdA=
 			</data>
 		</dict>
 		<key>TabView.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5NRFesQ1776GYJY+cGwDMERtxsILRpSkxR0Ef+LkDy4=
+			vhl5ohriUu5upWqhuup8sHewWo7eeE2rv5IpaSrmKZ0=
 			</data>
 		</dict>
 		<key>TabView.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OI+D80qVRd/yvAmIMeqX6VrB5rEKj8pkwTqCooJq0/s=
+			jrzI25PCMppDoN0d05QEwfA2nHyLFCa26mrOw6QfAYE=
 			</data>
 		</dict>
 		<key>icon_close.png</key>
