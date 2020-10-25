@@ -1,9 +1,9 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)
-// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name CDP365Analytic
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CDP365Analytic
 import AdSupport
+import AppTrackingTransparency
 @_exported import CDP365Analytic
-import CoreGraphics
 import CoreLocation
 import CoreTelephony
 import CryptoKit
@@ -14,433 +14,47 @@ import Swift
 import SystemConfiguration
 import UIKit
 import WebKit
-public protocol ITIdentifiable {
-  var id: Swift.String { get }
-}
-@objc open class ITCornerRoundingView : UIKit.UIView {
-  @objc @IBInspectable open var cornerRadius: CoreGraphics.CGFloat {
-    @objc get
-    @objc set(newValue)
-  }
-  @objc @IBInspectable open var roundsLeadingCorners: Swift.Bool
-  open var roundedCorners: UIKit.UIRectCorner {
-    get
-    set(newValue)
-  }
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc override dynamic open func layoutSubviews()
-  @objc deinit
-}
-open class ITSwiftMessages {
-  public enum ITPresentationStyle {
-    case top
-    case bottom
-    case center
-    case fullscreen
-    case custom(animator: CDP365Analytic.ITAnimator)
-  }
-  public enum ITPresentationContext {
-    case automatic
-    case window(windowLevel: UIKit.UIWindow.Level)
-    @available(iOS 13.0, *)
-    case windowScene(UIKit.UIWindowScene, windowLevel: UIKit.UIWindow.Level)
-    case viewController(UIKit.UIViewController)
-    case view(UIKit.UIView)
-  }
-  public enum ITDuration {
-    case automatic
-    case forever
-    case seconds(seconds: Foundation.TimeInterval)
-    case indefinite(delay: Foundation.TimeInterval, minimum: Foundation.TimeInterval)
-  }
-  public enum ITDimMode {
-    case none
-    case gray(interactive: Swift.Bool)
-    case color(color: UIKit.UIColor, interactive: Swift.Bool)
-    case blur(style: UIKit.UIBlurEffect.Style, alpha: CoreGraphics.CGFloat, interactive: Swift.Bool)
-    public var interactive: Swift.Bool {
-      get
-    }
-    public var modal: Swift.Bool {
-      get
-    }
-  }
-  public enum ITEvent {
-    case willShow
-    case didShow
-    case willHide
-    case didHide
-    public static func == (a: CDP365Analytic.ITSwiftMessages.ITEvent, b: CDP365Analytic.ITSwiftMessages.ITEvent) -> Swift.Bool
-    public var hashValue: Swift.Int {
-      get
-    }
-    public func hash(into hasher: inout Swift.Hasher)
-  }
-  public typealias ITEventListener = (CDP365Analytic.ITSwiftMessages.ITEvent) -> Swift.Void
-  public struct ITConfig {
-    public init()
-    public var presentationStyle: CDP365Analytic.ITSwiftMessages.ITPresentationStyle
-    public var presentationContext: CDP365Analytic.ITSwiftMessages.ITPresentationContext
-    public var duration: CDP365Analytic.ITSwiftMessages.ITDuration
-    public var dimMode: CDP365Analytic.ITSwiftMessages.ITDimMode
-    public var interactiveHide: Swift.Bool
-    public var preferredStatusBarStyle: UIKit.UIStatusBarStyle?
-    public var prefersStatusBarHidden: Swift.Bool?
-    public var shouldAutorotate: Swift.Bool
-    public var ignoreDuplicates: Swift.Bool
-    public var eventListeners: [CDP365Analytic.ITSwiftMessages.ITEventListener]
-    public var becomeKeyWindow: Swift.Bool?
-    public var dimModeAccessibilityLabel: Swift.String
-    @available(iOS 13, *)
-    public var overrideUserInterfaceStyle: UIKit.UIUserInterfaceStyle {
-      get
-      set(newValue)
-    }
-    public var windowViewController: ((UIKit.UIWindow.Level?, CDP365Analytic.ITSwiftMessages.ITConfig) -> CDP365Analytic.ITWindowViewController)?
-    public var keyboardTrackingView: CDP365Analytic.ITKeyboardTrackingView?
-  }
-  public init()
-  open func show(config: CDP365Analytic.ITSwiftMessages.ITConfig, view: UIKit.UIView)
-  public func show(view: UIKit.UIView)
-  public typealias ITViewProvider = () -> UIKit.UIView
-  open func show(config: CDP365Analytic.ITSwiftMessages.ITConfig, viewProvider: @escaping CDP365Analytic.ITSwiftMessages.ITViewProvider)
-  public func show(viewProvider: @escaping CDP365Analytic.ITSwiftMessages.ITViewProvider)
-  open func hide(animated: Swift.Bool = true)
-  open func hideAll()
-  open func hide(id: Swift.String)
-  open func hideCounted(id: Swift.String)
-  public func count(id: Swift.String) -> Swift.Int
-  public func set(count: Swift.Int, for id: Swift.String)
-  public var defaultConfig: CDP365Analytic.ITSwiftMessages.ITConfig
-  open var pauseBetweenMessages: Foundation.TimeInterval
-  @objc deinit
-}
-extension ITSwiftMessages {
-  public func current<T>() -> T? where T : UIKit.UIView
-  public func current<T>(id: Swift.String) -> T? where T : UIKit.UIView
-  public func queued<T>(id: Swift.String) -> T? where T : UIKit.UIView
-  public func currentOrQueued<T>(id: Swift.String) -> T? where T : UIKit.UIView
-}
-extension ITSwiftMessages {
-  public func hide(animator: CDP365Analytic.ITAnimator)
-  public func panStarted(animator: CDP365Analytic.ITAnimator)
-  public func panEnded(animator: CDP365Analytic.ITAnimator)
-}
-extension ITSwiftMessages {
-  public class func viewFromNib<T>(_ filesOwner: Swift.AnyObject = NSNull.init()) throws -> T where T : UIKit.UIView
-  public class func viewFromNib<T>(named name: Swift.String, filesOwner: Swift.AnyObject = NSNull.init()) throws -> T where T : UIKit.UIView
-  public class func viewFromNib<T>(named name: Swift.String, bundle: Foundation.Bundle, filesOwner: Swift.AnyObject = NSNull.init()) throws -> T where T : UIKit.UIView
-}
-extension ITSwiftMessages {
-  public static var sharedInstance: CDP365Analytic.ITSwiftMessages {
-    get
-  }
-  public static func show(viewProvider: @escaping CDP365Analytic.ITSwiftMessages.ITViewProvider)
-  public static func show(config: CDP365Analytic.ITSwiftMessages.ITConfig, viewProvider: @escaping CDP365Analytic.ITSwiftMessages.ITViewProvider)
-  public static func show(view: UIKit.UIView)
-  public static func show(config: CDP365Analytic.ITSwiftMessages.ITConfig, view: UIKit.UIView)
-  public static func hide(animated: Swift.Bool = true)
-  public static func hideAll()
-  public static func hide(id: Swift.String)
-  public static func hideCounted(id: Swift.String)
-  public static var defaultConfig: CDP365Analytic.ITSwiftMessages.ITConfig {
-    get
-    set(newValue)
-  }
-  public static var pauseBetweenMessages: Foundation.TimeInterval {
-    get
-    set(newValue)
-  }
-  public static func current<T>(id: Swift.String) -> T? where T : UIKit.UIView
-  public static func queued<T>(id: Swift.String) -> T? where T : UIKit.UIView
-  public static func currentOrQueued<T>(id: Swift.String) -> T? where T : UIKit.UIView
-  public static func count(id: Swift.String) -> Swift.Int
-  public static func set(count: Swift.Int, for id: Swift.String)
-}
-@objc public class ITTopBottomAnimation : ObjectiveC.NSObject, CDP365Analytic.ITAnimator {
-  public enum ITStyle {
-    case top
-    case bottom
-    public static func == (a: CDP365Analytic.ITTopBottomAnimation.ITStyle, b: CDP365Analytic.ITTopBottomAnimation.ITStyle) -> Swift.Bool
-    public var hashValue: Swift.Int {
-      get
-    }
-    public func hash(into hasher: inout Swift.Hasher)
-  }
-  weak public var delegate: CDP365Analytic.ITAnimationDelegate?
-  final public let style: CDP365Analytic.ITTopBottomAnimation.ITStyle
-  open var showDuration: Foundation.TimeInterval
-  open var hideDuration: Foundation.TimeInterval
-  open var springDamping: CoreGraphics.CGFloat
-  open var closeSpeedThreshold: CoreGraphics.CGFloat
-  open var closePercentThreshold: CoreGraphics.CGFloat
-  open var closeAbsoluteThreshold: CoreGraphics.CGFloat
-  public var panGestureRecognizer: UIKit.UIPanGestureRecognizer {
-    get
-  }
-  public init(style: CDP365Analytic.ITTopBottomAnimation.ITStyle)
-  public func show(context: CDP365Analytic.ITAnimationContext, completion: @escaping CDP365Analytic.ITAnimationCompletion)
-  public func hide(context: CDP365Analytic.ITAnimationContext, completion: @escaping CDP365Analytic.ITAnimationCompletion)
-  @objc public func adjustMargins()
-  @objc override dynamic public init()
-  @objc deinit
-}
-@objc open class ITBaseView : UIKit.UIView, CDP365Analytic.ITBackgroundViewable, CDP365Analytic.ITMarginAdjustable {
-  @objc @IBOutlet weak open var backgroundView: UIKit.UIView! {
-    @objc get
-    @objc set(newValue)
-  }
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  open func installContentView(_ contentView: UIKit.UIView, insets: UIKit.UIEdgeInsets = UIEdgeInsets.zero)
-  open func installBackgroundView(_ backgroundView: UIKit.UIView, insets: UIKit.UIEdgeInsets = UIEdgeInsets.zero)
-  open func installBackgroundVerticalView(_ backgroundView: UIKit.UIView, insets: UIKit.UIEdgeInsets = UIEdgeInsets.zero)
-  open var tapHandler: ((CDP365Analytic.ITBaseView) -> Swift.Void)? {
-    get
-    set(newValue)
-  }
-  @objc override dynamic open func point(inside point: CoreGraphics.CGPoint, with event: UIKit.UIEvent?) -> Swift.Bool
-  public var layoutMarginAdditions: UIKit.UIEdgeInsets {
-    get
-    set(newValue)
-  }
-  @objc @IBInspectable open var topLayoutMarginAddition: CoreGraphics.CGFloat
-  @objc @IBInspectable open var leftLayoutMarginAddition: CoreGraphics.CGFloat
-  @objc @IBInspectable open var bottomLayoutMarginAddition: CoreGraphics.CGFloat
-  @objc @IBInspectable open var rightLayoutMarginAddition: CoreGraphics.CGFloat
-  @objc @IBInspectable open var collapseLayoutMarginAdditions: Swift.Bool
-  @objc @IBInspectable open var bounceAnimationOffset: CoreGraphics.CGFloat
-  open var backgroundHeight: CoreGraphics.CGFloat? {
-    get
-    set(newValue)
-  }
-  @objc override dynamic open func updateConstraints()
-  @objc deinit
-}
-extension ITBaseView {
-  open func configureDropShadow()
-  open func configureNoDropShadow()
-  @objc override dynamic open func layoutSubviews()
-}
-extension ITBaseView {
-  public func configureBackgroundView(sideMargin: CoreGraphics.CGFloat)
-  public func configureBackgroundView(width: CoreGraphics.CGFloat)
-}
-@objc public class ITPhysicsAnimation : ObjectiveC.NSObject, CDP365Analytic.ITAnimator {
-  public enum ITPlacement {
-    case top
-    case center
-    case bottom
-    case fullscreen
-    public static func == (a: CDP365Analytic.ITPhysicsAnimation.ITPlacement, b: CDP365Analytic.ITPhysicsAnimation.ITPlacement) -> Swift.Bool
-    public var hashValue: Swift.Int {
-      get
-    }
-    public func hash(into hasher: inout Swift.Hasher)
-  }
-  open var placement: CDP365Analytic.ITPhysicsAnimation.ITPlacement
-  open var showDuration: Foundation.TimeInterval
-  open var hideDuration: Foundation.TimeInterval
-  public var panHandler: CDP365Analytic.ITPhysicsPanHandler
-  weak public var delegate: CDP365Analytic.ITAnimationDelegate?
-  public init(placement: CDP365Analytic.ITPhysicsAnimation.ITPlacement)
-  public func show(context: CDP365Analytic.ITAnimationContext, completion: @escaping CDP365Analytic.ITAnimationCompletion)
-  public func hide(context: CDP365Analytic.ITAnimationContext, completion: @escaping CDP365Analytic.ITAnimationCompletion)
-  @objc public func adjustMargins()
-  @objc override dynamic public init()
-  @objc deinit
-}
-extension ITMarginAdjustable where Self : UIKit.UIView {
-  public func defaultMarginAdjustment(context: CDP365Analytic.ITAnimationContext) -> UIKit.UIEdgeInsets
-}
-public var ReachabilityChangedNotification: Swift.String
-@objc public class ITReachability : ObjectiveC.NSObject {
-  public typealias NetworkReachable = (CDP365Analytic.ITReachability) -> ()
-  public typealias NetworkUnreachable = (CDP365Analytic.ITReachability) -> ()
-  public enum NetworkStatus : Swift.CustomStringConvertible {
-    case notReachable
-    case reachableViaWiFi
-    case reachableViaWWAN
-    public var description: Swift.String {
-      get
-    }
-    public static func == (a: CDP365Analytic.ITReachability.NetworkStatus, b: CDP365Analytic.ITReachability.NetworkStatus) -> Swift.Bool
-    public var hashValue: Swift.Int {
-      get
-    }
-    public func hash(into hasher: inout Swift.Hasher)
-  }
-  public var whenReachable: CDP365Analytic.ITReachability.NetworkReachable?
-  public var whenUnreachable: CDP365Analytic.ITReachability.NetworkUnreachable?
-  public var reachableOnWWAN: Swift.Bool
-  public var notificationCenter: Foundation.NotificationCenter
-  public var currentReachabilityStatus: CDP365Analytic.ITReachability.NetworkStatus {
-    get
-  }
-  public var currentReachabilityString: Swift.String {
-    get
-  }
-  required public init?(reachabilityRef: SystemConfiguration.SCNetworkReachability?)
-  public convenience init?(hostname: Swift.String)
-  public class func reachabilityForInternetConnection() -> CDP365Analytic.ITReachability?
-  public func startNotifier() -> Swift.Bool
-  public func stopNotifier()
-  public func isReachable() -> Swift.Bool
-  public func isReachableViaWWAN() -> Swift.Bool
-  public func isReachableViaWiFi() -> Swift.Bool
-  @objc override dynamic public var description: Swift.String {
-    @objc get
-  }
-  @objc deinit
-  @objc override dynamic public init()
-}
 public protocol Dispatcher {
   func send(event: CDP365Analytic.ANEvent, success: @escaping () -> (), failure: @escaping (Swift.Error) -> ())
 }
-public protocol ITAccessibleMessage {
-  var accessibilityMessage: Swift.String? { get }
-  var accessibilityElement: ObjectiveC.NSObject? { get }
-  var additonalAccessibilityElements: [ObjectiveC.NSObject]? { get }
+public protocol EnumCollection : Swift.Hashable {
+  static func cases() -> Swift.AnySequence<Self>
+  static var allValues: [Self] { get }
 }
-final public class URLSessionDispatcher : CDP365Analytic.Dispatcher {
+extension EnumCollection {
+  public static func cases() -> Swift.AnySequence<Self>
+  public static var allValues: [Self] {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class URLSessionDispatcher : CDP365Analytic.Dispatcher {
   final public func send(event: CDP365Analytic.ANEvent, success: @escaping () -> (), failure: @escaping (Swift.Error) -> ())
   @objc deinit
 }
-public protocol ITKeyboardTrackingViewDelegate : AnyObject {
-  func keyboardTrackingViewWillChange(change: CDP365Analytic.ITKeyboardTrackingView.Change, userInfo: [Swift.AnyHashable : Any])
-  func keyboardTrackingViewDidChange(change: CDP365Analytic.ITKeyboardTrackingView.Change, userInfo: [Swift.AnyHashable : Any])
-}
-@objc open class ITKeyboardTrackingView : UIKit.UIView {
-  public enum Change {
-    case show
-    case hide
-    case frame
-    public static func == (a: CDP365Analytic.ITKeyboardTrackingView.Change, b: CDP365Analytic.ITKeyboardTrackingView.Change) -> Swift.Bool
-    public var hashValue: Swift.Int {
-      get
-    }
-    public func hash(into hasher: inout Swift.Hasher)
-  }
-  weak public var delegate: CDP365Analytic.ITKeyboardTrackingViewDelegate?
-  open var isPaused: Swift.Bool {
-    get
-    set(newValue)
-  }
-  @objc @IBInspectable open var topMargin: CoreGraphics.CGFloat
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc override dynamic open func awakeFromNib()
-  @objc deinit
-}
-public class ITWeak<T> where T : AnyObject {
-  weak public var value: T?
-  public init(value: T?)
-  @objc deinit
-}
-public protocol ITMarginAdjustable {
-  var layoutMarginAdditions: UIKit.UIEdgeInsets { get }
-  var collapseLayoutMarginAdditions: Swift.Bool { get set }
-  var bounceAnimationOffset: CoreGraphics.CGFloat { get set }
-}
-@objc open class ITMessageView : CDP365Analytic.ITBaseView, CDP365Analytic.ITIdentifiable, CDP365Analytic.ITAccessibleMessage, WebKit.WKNavigationDelegate {
-  open var buttonTapHandler: ((UIKit.UIButton) -> Swift.Void)?
-  open var onTapDirecLink: (() -> Swift.Void)?
-  @objc override dynamic open func point(inside point: CoreGraphics.CGPoint, with event: UIKit.UIEvent?) -> Swift.Bool
-  @objc @IBOutlet open var titleLabel: UIKit.UILabel?
-  @objc @IBOutlet open var bodyLabel: UIKit.UILabel?
-  @objc @IBOutlet open var iconImageView: UIKit.UIImageView?
-  @objc @IBOutlet open var iconLabel: UIKit.UILabel?
-  @objc @IBOutlet open var button: UIKit.UIButton? {
-    @objc get
-    @objc set(newValue)
-  }
-  open var id: Swift.String {
-    get
-    set(newValue)
-  }
-  open var accessibilityPrefix: Swift.String?
-  open var accessibilityMessage: Swift.String? {
-    get
-  }
-  public var accessibilityElement: ObjectiveC.NSObject? {
-    get
-  }
-  open var additonalAccessibilityElements: [ObjectiveC.NSObject]? {
-    get
-  }
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @objc deinit
-}
-extension ITMessageView {
-  public enum Layout : Swift.String {
-    case messageView
-    case cardView
-    case tabView
-    case statusLine
-    case centeredView
-    public typealias RawValue = Swift.String
-    public init?(rawValue: Swift.String)
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public static func viewFromNib<T>(layout: CDP365Analytic.ITMessageView.Layout, filesOwner: Swift.AnyObject = NSNull.init()) -> T where T : CDP365Analytic.ITMessageView
-  public static func viewFromNib<T>(layout: CDP365Analytic.ITMessageView.Layout, bundle: Foundation.Bundle, filesOwner: Swift.AnyObject = NSNull.init()) -> T where T : CDP365Analytic.ITMessageView
-}
-extension ITMessageView {
-  public func configureIcon(withSize size: CoreGraphics.CGSize, contentMode: UIKit.UIView.ContentMode? = nil)
-}
-extension ITMessageView {
-  public func configureTheme(backgroundColor: UIKit.UIColor, foregroundColor: UIKit.UIColor, iconImage: UIKit.UIImage? = nil, iconText: Swift.String? = nil)
-}
-extension ITMessageView {
-  public func configureContent(body: Swift.String)
-  public func configureContent(title: Swift.String, body: Swift.String)
-  public func configureContent(title: Swift.String, body: Swift.String, iconImage: UIKit.UIImage)
-  public func configureContent(title: Swift.String, body: Swift.String, iconText: Swift.String)
-  public func configureContent(title: Swift.String?, body: Swift.String?, iconImage: UIKit.UIImage?, iconText: Swift.String?, buttonImage: UIKit.UIImage?, buttonTitle: Swift.String?, buttonTapHandler: ((UIKit.UIButton) -> Swift.Void)?)
-}
-extension ITMessageView {
-  @objc dynamic public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: (WebKit.WKNavigationActionPolicy) -> Swift.Void)
-  @objc dynamic public func webView(_ webView: WebKit.WKWebView, didStartProvisionalNavigation navigation: WebKit.WKNavigation!)
-  @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: Swift.Error)
-  @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: Swift.Error)
-  @objc dynamic public func webView(_ webView: WebKit.WKWebView, didCommit navigation: WebKit.WKNavigation!)
-  @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
-}
-public typealias Parameters = [Swift.String : Any]
-public typealias ITAnimationCompletion = (Swift.Bool) -> Swift.Void
-public protocol ITAnimationDelegate : AnyObject {
-  func hide(animator: CDP365Analytic.ITAnimator)
-  func panStarted(animator: CDP365Analytic.ITAnimator)
-  func panEnded(animator: CDP365Analytic.ITAnimator)
-}
-public struct ITSafeZoneConflicts : Swift.OptionSet {
-  public let rawValue: Swift.Int
-  public init(rawValue: Swift.Int)
-  public static var statusBar: CDP365Analytic.ITSafeZoneConflicts
-  public static var sensorNotch: CDP365Analytic.ITSafeZoneConflicts
-  public static var homeIndicator: CDP365Analytic.ITSafeZoneConflicts
-  public static var overStatusBar: CDP365Analytic.ITSafeZoneConflicts
-  public typealias Element = CDP365Analytic.ITSafeZoneConflicts
-  public typealias ArrayLiteralElement = CDP365Analytic.ITSafeZoneConflicts
+@objc public enum ANLogLevel : Swift.Int {
+  case verbose = 10
+  case debug = 20
+  case info = 30
+  case warning = 40
+  case error = 50
   public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
 }
-public class ITAnimationContext {
-  final public let messageView: UIKit.UIView
-  final public let containerView: UIKit.UIView
-  final public let safeZoneConflicts: CDP365Analytic.ITSafeZoneConflicts
-  final public let interactiveHide: Swift.Bool
+@objc public protocol ANLogger {
+  @objc func log(_ message: @autoclosure () -> Swift.String, with level: CDP365Analytic.ANLogLevel, file: Swift.String, function: Swift.String, line: Swift.Int)
+}
+@_hasMissingDesignatedInitializers final public class ANDisabledLogger : CDP365Analytic.ANLogger {
+  @objc final public func log(_ message: @autoclosure () -> Swift.String, with level: CDP365Analytic.ANLogLevel, file: Swift.String = #file, function: Swift.String = #function, line: Swift.Int = #line)
   @objc deinit
 }
-public protocol ITAnimator : AnyObject {
-  var delegate: CDP365Analytic.ITAnimationDelegate? { get set }
-  func show(context: CDP365Analytic.ITAnimationContext, completion: @escaping CDP365Analytic.ITAnimationCompletion)
-  func hide(context: CDP365Analytic.ITAnimationContext, completion: @escaping CDP365Analytic.ITAnimationCompletion)
-  var showDuration: Foundation.TimeInterval { get }
-  var hideDuration: Foundation.TimeInterval { get }
+@objc final public class ANDefaultLogger : ObjectiveC.NSObject, CDP365Analytic.ANLogger {
+  @objc public init(minLevel: CDP365Analytic.ANLogLevel)
+  @objc final public func log(_ message: @autoclosure () -> Swift.String, with level: CDP365Analytic.ANLogLevel, file: Swift.String = #file, function: Swift.String = #function, line: Swift.Int = #line)
+  @objc deinit
+  @objc override dynamic public init()
 }
 open class ITKeychainSwift {
   open var lastResultCode: Darwin.OSStatus
@@ -513,166 +127,62 @@ public enum ITKeychainSwiftAccessOptions {
   }
   public func hash(into hasher: inout Swift.Hasher)
 }
-extension UIEdgeInsets {
-  public static func + (left: UIKit.UIEdgeInsets, right: UIKit.UIEdgeInsets) -> UIKit.UIEdgeInsets
-  public static func - (left: UIKit.UIEdgeInsets, right: UIKit.UIEdgeInsets) -> UIKit.UIEdgeInsets
-}
-@objc public class CDP365Analytic : ObjectiveC.NSObject {
-  @objc public static func configure()
-  @objc public static func logEvent(screenName: Swift.String)
-  @objc public static func logEvent(categoryName: Swift.String, actionName: Swift.String, items: [Foundation.NSDictionary]? = nil, extra: Foundation.NSDictionary? = nil, dimension: [Foundation.NSDictionary]? = nil)
-  @objc public static func resetAnonymousId()
-  @objc override dynamic public init()
-  @objc deinit
-}
+public typealias Parameters = [Swift.String : Any]
 public struct ANEvent {
 }
 extension ANEvent {
   public init(screenName: Swift.String? = "", categoryName: Swift.String? = "", actionName: Swift.String? = "", items: [Foundation.NSDictionary]? = [], extra: Foundation.NSDictionary? = nil, dimension: [Foundation.NSDictionary]? = [])
 }
-public protocol ITBackgroundViewable {
-  var backgroundView: UIKit.UIView! { get }
-}
-open class ITPhysicsPanHandler {
-  public var hideDelay: Foundation.TimeInterval
-  public struct ITMotionSnapshot {
-  }
-  final public class ITState {
-    public init(messageView: UIKit.UIView, containerView: UIKit.UIView)
-    final public func stop()
-    final public var angularVelocity: CoreGraphics.CGFloat {
-      get
-    }
-    @objc deinit
-  }
-  public var state: CDP365Analytic.ITPhysicsPanHandler.ITState? {
-    get
-    }
-  public var isOffScreen: Swift.Bool {
-    get
-    }
-  public init()
-  public var pan: UIKit.UIPanGestureRecognizer {
-    get
-  }
-  @objc deinit
-}
-@objc open class ITSwiftMessagesSegue : UIKit.UIStoryboardSegue {
-  public enum ITLayout {
-    case topMessage
-    case bottomMessage
-    case topCard
-    case topTab
-    case bottomCard
-    case bottomTab
-    case centered
-    public static func == (a: CDP365Analytic.ITSwiftMessagesSegue.ITLayout, b: CDP365Analytic.ITSwiftMessagesSegue.ITLayout) -> Swift.Bool
-    public var hashValue: Swift.Int {
-      get
-    }
-    public func hash(into hasher: inout Swift.Hasher)
-  }
-  public enum Containment {
-    case content
-    case background
-    case backgroundVertical
-    public static func == (a: CDP365Analytic.ITSwiftMessagesSegue.Containment, b: CDP365Analytic.ITSwiftMessagesSegue.Containment) -> Swift.Bool
-    public var hashValue: Swift.Int {
-      get
-    }
-    public func hash(into hasher: inout Swift.Hasher)
-  }
-  public var presentationStyle: CDP365Analytic.ITSwiftMessages.ITPresentationStyle {
-    get
-    set(newValue)
-  }
-  public var dimMode: CDP365Analytic.ITSwiftMessages.ITDimMode {
-    get
-    set(newValue)
-  }
-  public var duration: CDP365Analytic.ITSwiftMessages.ITDuration {
-    get
-    set(newValue)
-  }
-  public var interactiveHide: Swift.Bool {
-    get
-    set(newValue)
-  }
-  public var eventListeners: [CDP365Analytic.ITSwiftMessages.ITEventListener] {
-    get
-    set(newValue)
-  }
-  public var messageView: CDP365Analytic.ITBaseView
-  public var containerView: CDP365Analytic.ITCornerRoundingView
-  public var containment: CDP365Analytic.ITSwiftMessagesSegue.Containment
-  public var keyboardTrackingView: CDP365Analytic.ITKeyboardTrackingView? {
-    get
-    set(newValue)
-  }
-  @objc override dynamic open func perform()
-  @objc override dynamic public init(identifier: Swift.String?, source: UIKit.UIViewController, destination: UIKit.UIViewController)
-  @objc deinit
-}
-extension ITSwiftMessagesSegue {
-  public func configure(layout: CDP365Analytic.ITSwiftMessagesSegue.ITLayout)
-}
-extension ITSwiftMessagesSegue : UIKit.UIViewControllerTransitioningDelegate {
-  @objc dynamic public func animationController(forPresented presented: UIKit.UIViewController, presenting: UIKit.UIViewController, source: UIKit.UIViewController) -> UIKit.UIViewControllerAnimatedTransitioning?
-  @objc dynamic public func animationController(forDismissed dismissed: UIKit.UIViewController) -> UIKit.UIViewControllerAnimatedTransitioning?
-}
-public protocol EnumCollection : Swift.Hashable {
-  static func cases() -> Swift.AnySequence<Self>
-  static var allValues: [Self] { get }
-}
-extension EnumCollection {
-  public static func cases() -> Swift.AnySequence<Self>
-  public static var allValues: [Self] {
-    get
-  }
-}
-@objc open class ITWindowViewController : UIKit.UIViewController {
-  @objc override dynamic open var shouldAutorotate: Swift.Bool {
-    @objc get
-  }
-  public init(windowLevel: UIKit.UIWindow.Level?, config: CDP365Analytic.ITSwiftMessages.ITConfig)
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc override dynamic open var preferredStatusBarStyle: UIKit.UIStatusBarStyle {
-    @objc get
-  }
-  @objc override dynamic open var prefersStatusBarHidden: Swift.Bool {
-    @objc get
-  }
-  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @objc deinit
-}
-@objc public enum ANLogLevel : Swift.Int {
-  case verbose = 10
-  case debug = 20
-  case info = 30
-  case warning = 40
-  case error = 50
-  public typealias RawValue = Swift.Int
-  public init?(rawValue: Swift.Int)
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc public protocol ANLogger {
-  @objc func log(_ message: @autoclosure () -> Swift.String, with level: CDP365Analytic.ANLogLevel, file: Swift.String, function: Swift.String, line: Swift.Int)
-}
-final public class ANDisabledLogger : CDP365Analytic.ANLogger {
-  @objc final public func log(_ message: @autoclosure () -> Swift.String, with level: CDP365Analytic.ANLogLevel, file: Swift.String = #file, function: Swift.String = #function, line: Swift.Int = #line)
-  @objc deinit
-}
-@objc final public class ANDefaultLogger : ObjectiveC.NSObject, CDP365Analytic.ANLogger {
-  @objc public init(minLevel: CDP365Analytic.ANLogLevel)
-  @objc final public func log(_ message: @autoclosure () -> Swift.String, with level: CDP365Analytic.ANLogLevel, file: Swift.String = #file, function: Swift.String = #function, line: Swift.Int = #line)
-  @objc override dynamic public init()
-  @objc deinit
-}
 public struct ANConfigure : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
+}
+@_inheritsConvenienceInitializers @objc public class CDP365Analytic : ObjectiveC.NSObject {
+  @objc public static func configure()
+  @objc public static func logEvent(screenName: Swift.String)
+  @objc public static func logEvent(categoryName: Swift.String, actionName: Swift.String, items: [Foundation.NSDictionary]? = nil, extra: Foundation.NSDictionary? = nil, dimension: [Foundation.NSDictionary]? = nil)
+  @objc public static func resetAnonymousId()
+  @objc deinit
+  @objc override dynamic public init()
+}
+public let ReachabilityChangedNotification: Swift.String
+@objc public class ITReachability : ObjectiveC.NSObject {
+  public typealias NetworkReachable = (CDP365Analytic.ITReachability) -> ()
+  public typealias NetworkUnreachable = (CDP365Analytic.ITReachability) -> ()
+  public enum NetworkStatus : Swift.CustomStringConvertible {
+    case notReachable, reachableViaWiFi, reachableViaWWAN
+    public var description: Swift.String {
+      get
+    }
+    public static func == (a: CDP365Analytic.ITReachability.NetworkStatus, b: CDP365Analytic.ITReachability.NetworkStatus) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  public var whenReachable: CDP365Analytic.ITReachability.NetworkReachable?
+  public var whenUnreachable: CDP365Analytic.ITReachability.NetworkUnreachable?
+  public var reachableOnWWAN: Swift.Bool
+  public var notificationCenter: Foundation.NotificationCenter
+  public var currentReachabilityStatus: CDP365Analytic.ITReachability.NetworkStatus {
+    get
+  }
+  public var currentReachabilityString: Swift.String {
+    get
+  }
+  required public init?(reachabilityRef: SystemConfiguration.SCNetworkReachability?)
+  convenience public init?(hostname: Swift.String)
+  public class func reachabilityForInternetConnection() -> CDP365Analytic.ITReachability?
+  public func startNotifier() -> Swift.Bool
+  public func stopNotifier()
+  public func isReachable() -> Swift.Bool
+  public func isReachableViaWWAN() -> Swift.Bool
+  public func isReachableViaWiFi() -> Swift.Bool
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+  @objc override dynamic public init()
 }
 public struct SDKError : Swift.Error {
 }
@@ -681,4 +191,10 @@ extension SDKError : Foundation.LocalizedError {
     get
   }
 }
-extension CDP365Analytic.ITSwiftMessages : CDP365Analytic.ITAnimationDelegate {}
+extension CDP365Analytic.ANLogLevel : Swift.Equatable {}
+extension CDP365Analytic.ANLogLevel : Swift.Hashable {}
+extension CDP365Analytic.ANLogLevel : Swift.RawRepresentable {}
+extension CDP365Analytic.ITKeychainSwiftAccessOptions : Swift.Equatable {}
+extension CDP365Analytic.ITKeychainSwiftAccessOptions : Swift.Hashable {}
+extension CDP365Analytic.ITReachability.NetworkStatus : Swift.Equatable {}
+extension CDP365Analytic.ITReachability.NetworkStatus : Swift.Hashable {}

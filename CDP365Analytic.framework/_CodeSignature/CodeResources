@@ -4,211 +4,125 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>CardView.nib/objects-13.0+.nib</key>
-		<data>
-		w135+NwQyT+C2m9TYz/Yy7HOWkI=
-		</data>
-		<key>CardView.nib/runtime.nib</key>
-		<data>
-		MKnDADc4aZIttnFiVHpBv01b18Y=
-		</data>
-		<key>CenteredView.nib/objects-13.0+.nib</key>
-		<data>
-		CmYET8SqnFa45cvlKbeHKu+bXoE=
-		</data>
-		<key>CenteredView.nib/runtime.nib</key>
-		<data>
-		wtSUPFIX6I+aeoobq9edHRnlJ2c=
-		</data>
 		<key>Headers/CDP365Analytic-Swift.h</key>
 		<data>
-		lBc/u/LXS2QbbvvMLtNufqFWPmQ=
+		z/5PPlYHB83UZDbQrnvX+IcS+zU=
 		</data>
 		<key>Headers/CDP365Analytic.h</key>
 		<data>
-		kewPvHGG82nt2SLxgLoMVi7fEDU=
+		BMa2yWVMqBrredLzhEaldPL9eSI=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		dtk+auoJurrkm4/eUfT/PIF1RiY=
-		</data>
-		<key>MessageView.nib/objects-13.0+.nib</key>
-		<data>
-		HAktafVi4tb0/NYOiFtfJw0xrGA=
-		</data>
-		<key>MessageView.nib/runtime.nib</key>
-		<data>
-		7C3M7tXAwk78yTlh/21Tmyqtp7A=
+		a0HZHPqbcmj4Wgio3EeQCDmBcDc=
 		</data>
 		<key>Modules/CDP365Analytic.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		UCYKGZmydgjW4alPQvB8VArzsJc=
+		5kfkd2+/9pdZ1NkbxAmciaVAHmg=
 		</data>
 		<key>Modules/CDP365Analytic.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<data>
-		UCYKGZmydgjW4alPQvB8VArzsJc=
+		5kfkd2+/9pdZ1NkbxAmciaVAHmg=
 		</data>
 		<key>Modules/CDP365Analytic.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		CtmJH2CNgAn9ul9XxkKdesi5fIA=
+		Or5qa2UY/A4Tzjn/Xi4ertXbgNc=
 		</data>
 		<key>Modules/CDP365Analytic.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		CmXwKJOjVJYA9GGkFaroR2pR3Tg=
+		t7TnNIxNAp5KgX56+yccuMJ5I+8=
 		</data>
 		<key>Modules/CDP365Analytic.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		qi86cau9r3ndXMDQ3qeLRkphClc=
+		clMZtOg0xSL8YA446IzwbJM1Wxs=
 		</data>
 		<key>Modules/CDP365Analytic.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		CtmJH2CNgAn9ul9XxkKdesi5fIA=
+		Or5qa2UY/A4Tzjn/Xi4ertXbgNc=
 		</data>
 		<key>Modules/CDP365Analytic.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		CmXwKJOjVJYA9GGkFaroR2pR3Tg=
+		t7TnNIxNAp5KgX56+yccuMJ5I+8=
 		</data>
 		<key>Modules/CDP365Analytic.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		qi86cau9r3ndXMDQ3qeLRkphClc=
+		clMZtOg0xSL8YA446IzwbJM1Wxs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		+2UboFn3aBItTtbXhbI5fPGhzyo=
 		</data>
-		<key>StatusLine.nib/objects-13.0+.nib</key>
-		<data>
-		1jNJzlVMBpl536vCsCtH7z8zazc=
-		</data>
-		<key>StatusLine.nib/runtime.nib</key>
-		<data>
-		PEdpw+wBVpeiHjKavKB57pVUM78=
-		</data>
-		<key>TabView.nib/objects-13.0+.nib</key>
-		<data>
-		ikAiFkSuLKnKGZdN3SqY1DS9wMY=
-		</data>
-		<key>TabView.nib/runtime.nib</key>
-		<data>
-		zKTO43kZAPvHubrKq1k3on6vc/M=
-		</data>
-		<key>icon_close.png</key>
-		<data>
-		NKgGIWn2XGFv5V78xyRCAwFMZb0=
-		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>CardView.nib/objects-13.0+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			DLPLdEBrzHA6BErohQrlHLfyTb167yZYEx/Oo56XknY=
-			</data>
-		</dict>
-		<key>CardView.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			+5ZVzv41Fxz9hgN1G12CipVY60R0bVBXVb+C70wyF+E=
-			</data>
-		</dict>
-		<key>CenteredView.nib/objects-13.0+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			71MVtKHzBq4vCgsARl32rlFKXgw/5kBZKqC1/kmYUas=
-			</data>
-		</dict>
-		<key>CenteredView.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			eCkRC5bUeLr0HzKro9F/7eycgeaWL5zGoPO9c1BfEOI=
-			</data>
-		</dict>
 		<key>Headers/CDP365Analytic-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IS8mfq2soY4WjQmMXNrIabzWS+1B9yJRHEfCrsA768Y=
+			OrsNChn9L3kX0HyUmV4j4AXOFlZClc+ustt8qzsf4aw=
 			</data>
 		</dict>
 		<key>Headers/CDP365Analytic.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BYWBt4jxzf0bLQaJjTRxDGONoLNZd36ymBA5etIn7Lc=
-			</data>
-		</dict>
-		<key>MessageView.nib/objects-13.0+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			mA4YuEAXQSNDgeiWOPunHIA6qROp8lNQJrja0z0G06U=
-			</data>
-		</dict>
-		<key>MessageView.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			LYPDJZGpZrD3cNMEt+3JOcIFB4uu8JAdshD1Uhd+sxQ=
+			HCD5yp8w4XnDOk737V0V/zhFbzhAi9akp+7iP7oIC18=
 			</data>
 		</dict>
 		<key>Modules/CDP365Analytic.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tcUkjqzHJGr6pqbY4vXcZxMoHohB1iz9hLSlGM0/qXM=
+			ZxPvdIZrQW0/Liw5UqxYvNOs+cncOXrMlR0ueWQ7qo4=
 			</data>
 		</dict>
 		<key>Modules/CDP365Analytic.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tcUkjqzHJGr6pqbY4vXcZxMoHohB1iz9hLSlGM0/qXM=
+			ZxPvdIZrQW0/Liw5UqxYvNOs+cncOXrMlR0ueWQ7qo4=
 			</data>
 		</dict>
 		<key>Modules/CDP365Analytic.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3ixhphKJI49pzRPSC8XhIfg2WoEplVh7+qUpPYIRPJI=
+			gDnxgOMCGnE85cmLFWa+FVlv54g9JKsNeW81wWnemzQ=
 			</data>
 		</dict>
 		<key>Modules/CDP365Analytic.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0EgVfrEEaG/jZ6C9Lw3MpbZyuHlHB035yuFXkP34JWQ=
+			Ipm6fDOSIPnOEBlFR6eOqg+N/Wr6mDAn2b/cfRsv4wQ=
 			</data>
 		</dict>
 		<key>Modules/CDP365Analytic.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oa8rPQKDRf6/np1Mt1qK/75Y0uGizNSFrCCyE87x3yQ=
+			qckwHbjClfadI2EZJTa87tN6Udz28IujaHIGAjbB2hA=
 			</data>
 		</dict>
 		<key>Modules/CDP365Analytic.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3ixhphKJI49pzRPSC8XhIfg2WoEplVh7+qUpPYIRPJI=
+			gDnxgOMCGnE85cmLFWa+FVlv54g9JKsNeW81wWnemzQ=
 			</data>
 		</dict>
 		<key>Modules/CDP365Analytic.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0EgVfrEEaG/jZ6C9Lw3MpbZyuHlHB035yuFXkP34JWQ=
+			Ipm6fDOSIPnOEBlFR6eOqg+N/Wr6mDAn2b/cfRsv4wQ=
 			</data>
 		</dict>
 		<key>Modules/CDP365Analytic.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oa8rPQKDRf6/np1Mt1qK/75Y0uGizNSFrCCyE87x3yQ=
+			qckwHbjClfadI2EZJTa87tN6Udz28IujaHIGAjbB2hA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -216,41 +130,6 @@
 			<key>hash2</key>
 			<data>
 			KYOh4nFuOlPDs22yZVFGqHMycnK2jCm0lngDdVInGos=
-			</data>
-		</dict>
-		<key>StatusLine.nib/objects-13.0+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			78l30q3xuEn/ZW8MMMrJDADs+TaMuNUfghoEuvmfXQY=
-			</data>
-		</dict>
-		<key>StatusLine.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			DqUMPJ5atrObsmxYZonaiKL1v5PaYT4mb5lxc5I3AdA=
-			</data>
-		</dict>
-		<key>TabView.nib/objects-13.0+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			vhl5ohriUu5upWqhuup8sHewWo7eeE2rv5IpaSrmKZ0=
-			</data>
-		</dict>
-		<key>TabView.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			jrzI25PCMppDoN0d05QEwfA2nHyLFCa26mrOw6QfAYE=
-			</data>
-		</dict>
-		<key>icon_close.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			sbNp7DJXyCLmi9NxKiGqYRt6uTVnMG7jwS+f4D3wDjo=
 			</data>
 		</dict>
 	</dict>
