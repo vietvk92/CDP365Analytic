@@ -1,12 +1,12 @@
 Pod::Spec.new do |spec|
 
   spec.name          = "CDP365Analytic"
-  spec.version       = "1.0.0"
+  spec.version       = "1.0.1"
   spec.summary       = "CDP365Analytic framework."
   spec.description   = "This is a CDP365Analytic framework that was made by ANTSOMI"
   spec.homepage      = "https://antsprogrammatic.com"
   spec.author        = { "VietVK" => "vietvk@antsprogrammatic.com" }
-  spec.platform      = :ios, "12.0"
+  spec.platform      = :ios, "13.0"
   spec.source = { :http => "https://github.com/vietvk92/CDP365Analytic/archive/#{spec.version}.zip" }
   spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }

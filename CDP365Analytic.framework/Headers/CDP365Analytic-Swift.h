@@ -221,7 +221,7 @@ SWIFT_CLASS("_TtC14CDP365Analytic15ANDefaultLogger")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-typedef SWIFT_ENUM(NSInteger, ANLogLevel, closed) {
+typedef SWIFT_ENUM(NSInteger, ANLogLevel, open) {
   ANLogLevelVerbose = 10,
   ANLogLevelDebug = 20,
   ANLogLevelInfo = 30,
